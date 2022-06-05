@@ -1,0 +1,15 @@
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.csproj.AssemblyReference.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.AssemblyInfoInputs.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.AssemblyInfo.cs
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\bin\Debug\net6.0\DeckOfCards.exe
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\bin\Debug\net6.0\DeckOfCards.deps.json
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\bin\Debug\net6.0\DeckOfCards.runtimeconfig.json
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\bin\Debug\net6.0\DeckOfCards.dll
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\bin\Debug\net6.0\DeckOfCards.pdb
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.dll
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\refint\DeckOfCards.dll
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.pdb
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\DeckOfCards.genruntimeconfig.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\OOPWithC#\DeckOfCards\obj\Debug\net6.0\ref\DeckOfCards.dll

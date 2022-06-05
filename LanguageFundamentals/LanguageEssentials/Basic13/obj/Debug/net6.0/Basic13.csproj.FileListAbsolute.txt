@@ -1,0 +1,15 @@
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\bin\Debug\net6.0\Basic13.exe
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\bin\Debug\net6.0\Basic13.deps.json
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\bin\Debug\net6.0\Basic13.runtimeconfig.json
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\bin\Debug\net6.0\Basic13.dll
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\bin\Debug\net6.0\Basic13.pdb
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.csproj.AssemblyReference.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.AssemblyInfoInputs.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.AssemblyInfo.cs
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.dll
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\refint\Basic13.dll
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.pdb
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\Basic13.genruntimeconfig.cache
+C:\Users\Jason\Desktop\c#\LanguageFundamentals\LanguageEssentials\Basic13\obj\Debug\net6.0\ref\Basic13.dll
