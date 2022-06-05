@@ -28,6 +28,7 @@ class Deck
     {
         Card cardDrawn = cards[0];
         cards.RemoveAt(0);
+        Console.WriteLine(cards.Count);
         return cardDrawn;
     }
 
@@ -44,6 +45,10 @@ class Deck
             unshuffled.RemoveAt(i);
         }
         this.cards = shuffled;
+        foreach(Card card in shuffled)
+        {
+            Console.Write(card.Name + " of " + card.Suit + " || ");
+        }
     }
 
 }

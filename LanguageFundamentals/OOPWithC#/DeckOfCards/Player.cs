@@ -18,6 +18,7 @@ class Player
     {
         Card drawCard = draw.Deal();
         hand.Add(drawCard);
+        Console.WriteLine(hand.Count);
         return drawCard;
     }
 
@@ -28,10 +29,18 @@ class Player
         {
             newCard = hand[i];
             hand.RemoveAt(i);
+            Console.WriteLine(hand.Count);
             return newCard;
         }
         else {return null!;}
     }
 
-
+    public List<Card> ShowHand()
+    {
+        foreach(Card card in hand)
+        {
+            Console.Write(card.Name + " of " + card.Suit + " || ");
+        }
+        return hand;
+    }
 }
