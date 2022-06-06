@@ -11,13 +11,19 @@
 // Loop that prints all values from 1-100 //
 // Divisible by 3 OR 5, not both //
 
-// for (int i = 1; i <= 100; i++)
-// {
-//     if (i % 3 == 0 || i % 5 == 0)
-//     {
-//         Console.WriteLine(i);
-//     }
-// }
+for (int i = 1; i <= 100; i++)
+{
+    bool divisibleByThree = i % 3 == 0;
+    bool divisibleByFive = i % 5 == 0;
+    if (divisibleByThree && !divisibleByFive)
+    {
+        Console.WriteLine(i);
+    }
+    else if(divisibleByFive && !divisibleByThree)
+    {
+        Console.WriteLine(i);
+    }
+}
 
 // Modified Loop to print 'FIZZ' on % 3 //
 // Print 'BUZZ' on % 5 //
@@ -25,20 +31,21 @@
 
 for (int i = 1; i <= 100; i++)
 {
-    if (i % 3 == 0 && i % 5 == 0)
+    bool divisibleByThree = i % 3 == 0;
+    bool divisibleByFive = i % 5 == 0;
+    if (divisibleByThree && divisibleByFive)
     {
         Console.WriteLine("FIZZBUZZ");
     }
-    else if (i % 3 == 0)
+    else if (divisibleByThree)
     {
         Console.WriteLine("FIZZ");
     }
-    else if (i % 5 == 0)
+    else if (divisibleByFive)
     {
         Console.WriteLine("BUZZ");
     }
-    
-    else if (i % 3 != 0 || i % 5 != 0 )
+    else
     {
         Console.WriteLine(i);
     }
