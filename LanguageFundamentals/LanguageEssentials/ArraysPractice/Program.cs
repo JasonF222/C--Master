@@ -47,9 +47,9 @@ for (int idx = 0; idx < myCars.Length; idx++)
 }
 
 // FOR EACH Loop //
-string[] myCars = new string[] { "Mazda Miata", "Ford Model T", "Dodge Challenger", "Nissan 300ZX"};
-foreach (string car in myCars)
-{
-    // We no longer need the index, because the variable 'car' already represents each indexed value //
-    Console.WriteLine($"I own{car}");
-}
+// string[] myCars = new string[] { "Mazda Miata", "Ford Model T", "Dodge Challenger", "Nissan 300ZX"};
+// foreach (string car in myCars)
+// {
+//     We no longer need the index, because the variable 'car' already represents each indexed value //
+//     Console.WriteLine($"I own{car}");
+// }
