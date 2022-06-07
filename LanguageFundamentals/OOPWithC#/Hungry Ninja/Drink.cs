@@ -1,4 +1,4 @@
-class Food : IConsumable
+class Drink : IConsumable
 {
     public string Name {get;set;}
     public int Calories {get;set;}
@@ -9,7 +9,7 @@ class Food : IConsumable
         return$"{Name} (Food). Calories: {Calories}. Spicy? {IsSpicy}, Sweet?: {IsSweet}";
     }
 
-    public Food(string name, int calories, bool spicy, bool sweet)
+    public Drink(string name, int calories, bool spicy, bool sweet)
     {
         Name = name;
         Calories = calories;

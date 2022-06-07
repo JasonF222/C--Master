@@ -1,10 +1,10 @@
-class Buffet
+class Buffet 
 {
-    public List<Food> Menu;
+    public List<IConsumable> Menu;
 
     public Buffet()
     {
-        Menu = new List<Food>()
+        Menu = new List<IConsumable>()
         {
             new Food("Taco", 400, false, false),
             new Food("Pho", 300, true, false),
@@ -15,14 +15,18 @@ class Buffet
             new Food("Monte Cristo", 500, false, true),
             new Food("Burrito", 700, true, false),
             new Food("Mac n Cheese", 100, false, false),
-            new Food("Rotisserie Chicken", 200, false, false)
+            new Food("Rotisserie Chicken", 200, false, false),
+            new Drink("Mountain Dew Baja Blast", 150, false, true),
+            new Drink("Dr Pepper", 150, false, true),
+            new Drink("Coffee", 50, false, true),
+            new Drink("Water", 0, false, true)
         };
     }
 
-    public Food Serve()
+    public IConsumable Serve()
     {
         Random rand = new Random();
-        Food entree = Menu[rand.Next(Menu.Count())];
+        IConsumable entree = Menu[rand.Next(Menu.Count())];
         return entree;
     }
 }
