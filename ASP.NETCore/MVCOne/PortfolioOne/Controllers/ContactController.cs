@@ -6,8 +6,8 @@ public class Contact : Controller
     [HttpGet]
     [Route("contact")]
 
-    public string ViewContact()
+    public ViewResult ViewContact()
     {
-        return "These are my contacts!";
+        return View();
     }
 }

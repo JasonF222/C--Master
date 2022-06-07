@@ -19,3 +19,6 @@ C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\obj\Debug\net6.0\refin
 C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\obj\Debug\net6.0\PortfolioOne.pdb
 C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\obj\Debug\net6.0\PortfolioOne.genruntimeconfig.cache
 C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\obj\Debug\net6.0\ref\PortfolioOne.dll
+C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\obj\Debug\net6.0\PortfolioOne.RazorAssemblyInfo.cache
+C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\obj\Debug\net6.0\PortfolioOne.RazorAssemblyInfo.cs
+C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\bin\Debug\net6.0\PortfolioOne.staticwebassets.runtime.json

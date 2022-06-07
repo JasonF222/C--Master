@@ -6,8 +6,8 @@ namespace PortfolioOne.Controllers;
         [HttpGet]
         [Route("projects")]
         
-        public string Project()
+        public ViewResult Project()
         {
-            return "These are my projects!";
+            return View();
         }
     }

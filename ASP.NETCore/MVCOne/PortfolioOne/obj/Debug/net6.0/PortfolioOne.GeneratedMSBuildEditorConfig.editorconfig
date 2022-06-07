@@ -8,9 +8,21 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PortfolioOne
 build_property.RootNamespace = PortfolioOne
-build_property.ProjectDir = C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\
+build_property.ProjectDir = c:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne
+build_property.MSBuildProjectDirectory = c:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\PortfolioOne
 build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCOne/PortfolioOne/Views/Contact/ViewContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxWaWV3Q29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCOne/PortfolioOne/Views/Projects/Project.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcUHJvamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCOne/PortfolioOne/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

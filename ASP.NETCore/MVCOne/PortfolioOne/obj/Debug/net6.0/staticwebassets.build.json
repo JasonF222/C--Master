@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "PS/nZ1iPiRjUSr6ZLkDajkkwCo0qtokLK8ZYpvuC680=",
+  "Hash": "MJNp03JJM7gwIlMtE+/xC1zWvVyMktk20J59/PDS0RQ=",
   "Source": "PortfolioOne",
   "BasePath": "_content/PortfolioOne",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "PortfolioOne\\wwwroot",
+      "Source": "PortfolioOne",
+      "ContentRoot": "C:\\Users\\Jason\\Desktop\\c#\\ASP.NETCore\\MVCOne\\PortfolioOne\\wwwroot\\",
+      "BasePath": "_content/PortfolioOne",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Jason\\Desktop\\c#\\ASP.NETCore\\MVCOne\\PortfolioOne\\wwwroot\\css\\style.css",
+      "SourceId": "PortfolioOne",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jason\\Desktop\\c#\\ASP.NETCore\\MVCOne\\PortfolioOne\\wwwroot\\",
+      "BasePath": "_content/PortfolioOne",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
 }
