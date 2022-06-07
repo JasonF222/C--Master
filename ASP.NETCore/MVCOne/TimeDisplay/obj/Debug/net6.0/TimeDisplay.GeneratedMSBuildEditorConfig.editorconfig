@@ -8,13 +8,13 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TimeDisplay
 build_property.RootNamespace = TimeDisplay
-build_property.ProjectDir = C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\TimeDisplay\
+build_property.ProjectDir = c:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\TimeDisplay\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\TimeDisplay
+build_property.MSBuildProjectDirectory = c:\Users\Jason\Desktop\c#\ASP.NETCore\MVCOne\TimeDisplay
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCOne/TimeDisplay/Views/Time/Time.cshtml]
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCOne/TimeDisplay/Views/Time/Time.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZVxUaW1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
