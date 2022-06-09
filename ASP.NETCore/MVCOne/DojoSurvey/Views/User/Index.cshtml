@@ -1,0 +1,40 @@
+@model DojoSurvey.Models.Survey
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <h1 class="align-center">Dojo Survey</h1>
+    <div class="container mt10 mainWrap p5 dFlex justify-content-center">
+        <form asp-action="Survey" asp-controller="User" method="post" class="mt10 formWrap align-center">
+            <div class="name mt5">
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Name"></label>
+                <input type="text" name="Name" id="Name" placeholder="Full Name" asp-for="Name">
+            </div>
+            <div class="location mt5">
+                <span asp-validation-for="Location"></span>
+                <label asp-for="Location"></label>
+                <input type="text" name="Location" id="Location" placeholder="Dojo Location" asp-for="Location">
+            </div>
+            <div class="language mt5">
+                <span asp-validation-for="Language"></span>
+                <label asp-for="Language"></label>
+                <input type="text" name="Language" id="Language" placeholder="Favorite Language" asp-for="Language">
+            </div>
+            <div class="comment commentBox mt5">
+                <span asp-validation-for="Comment"></span>
+                <label asp-for="Comment"></label>
+                <textarea name="Comment" id="Comment" cols="30" rows="10" class="materialize-textarea" placeholder="Comments(optional)..." asp-for="Comment"></textarea>
+            </div>
+            <button type="submit" class="waves-effect waves-light btn align-center">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

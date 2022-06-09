@@ -63,6 +63,64 @@
   
 
         /**
+     * Retrieves the data of the second to last node in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @returns {any} The data of the second to last node or null if there is no
+     *    second to last node.
+     */
+
+      // Edge case for 1 node in list //
+
+        secondToLast() {
+          let runner = this.head;
+          if(this.isEmpty()) {
+            return null;
+          }
+          if(this.head.next == null) {
+            return null;
+          }
+          while(runner.next.next != null) {
+            runner = runner.next;
+          }
+          return runner.data;
+          
+        }
+
+        /**
+          * Removes the node that has the matching given val as it's data.
+          * - Time: O(?).
+          * - Space: O(?).
+          * @param {any} val The value to compare to the node's data to find the
+          *    node to be removed.
+          * @returns {boolean} Indicates if a node was removed or not.
+          */
+        removeVal(val) {
+          let runner = this.head;
+          if(this.isEmpty()) {
+            return false;
+          }
+        }
+     
+         // EXTRA
+         /**
+          * Inserts a new node before a node that has the given value as its data.
+          * - Time: O(?).
+          * - Space: O(?).
+          * @param {any} newVal The value to use for the new node that is being added.
+          * @param {any} targetVal The value to use to find the node that the newVal
+          *    should be inserted in front of.
+          * @returns {boolean} To indicate whether the node was pre-pended or not.
+          */
+
+        // check target.data and set newVal to be .next //
+
+         prepend(newVal, targetVal) {}
+
+
+
+
+        /**
      * Creates a new node with the given data and inserts that node at the front
      * of this list.
      * - Time: (?).
@@ -80,16 +138,14 @@
 
 
         
-         /**
+        /**
           * Removes the first node of this list.
           * - Time: (?).
           * - Space: (?).
           * @returns {any} The data from the removed node.
           */
-        removeHead() 
-        {
-          if(this.head == null)
-          {
+        removeHead() {
+          if(this.head == null) {
             return "List is empty!";
           }
           const newList = this.head.next;
@@ -98,16 +154,89 @@
         }
 
 
+    /**
+     * Removes the last node of this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @returns {any} The data from the node that was removed.
+     */
+
+    // empty list, 1 node in list (change head to null, return data that was removed) //
+    removeBack() {
+      var runner = this.head;
+      let removed = null;
+      if(!this.head) {
+        return null;
+      }
+      if(!this.next) {
+        this.head = null;
+        return removed.data;
+      }
+      while(runner.next.next) {
+        if(runner.next.next == null) {
+          removed = runner.next;
+          runner.next = null;
+          return removed.data;
+        }
+        runner = runner.next;
+      }
+    }
+    
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @returns {boolean}
+     */
+    contains(val) {
+      let runner = this.head;
+      while(runner !== null) {
+        if(runner.data == val) {
+          return true;
+        }
+        runner = runner.next;
+      }
+      return false;
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @param {?ListNode} current The current node during the traversal of this list
+     *    or null when the end of the list has been reached.
+     * @returns {boolean}
+     */
+    containsRecursive(val, current = this.head) {
+      if(current.data == val) {
+        return true;
+      }
+    }
+
+    // EXTRA
+    /**
+     * Recursively finds the maximum integer data of the nodes in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {ListNode} runner The start or current node during traversal, or null
+     *    when the end of the list is reached.
+     * @param {ListNode} maxNode Keeps track of the node that contains the current
+     *    max integer as it's data.
+     * @returns {?number} The max int or null if none.
+     */
+    recursiveMax(runner = this.head, maxNode = this.head) {}
 
 
          // EXTRA
-         /**
+        /**
           * Calculates the average of this list.
           * - Time: (?).
           * - Space: (?).
           * @returns {number|NaN} The average of the node's data.
           */
-         average() {}
+        average() {}
 
 
     /**
@@ -199,8 +328,11 @@
   Below commented code depends on insertAtBack method to be completed,
   after completing it, uncomment the code.
   */
+  const newList = new SinglyLinkedList()
   const emptyList = new SinglyLinkedList();
-  console.log(emptyList.insertAtFront("hello").insertAtFront("later"));
+  console.log(newList.insertAtBack("Hello").insertAtBack("Goodbye").insertAtBack("Friend").insertAtBack("Enemy").insertAtBack("Nuggie"));
+  console.log(newList.secondToLast());
+
   // console.log(emptyList.removeHead());
   // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
   // const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
@@ -225,3 +357,4 @@
   
 //   Print your list like so:
   // console.log(firstThreeList.toArr());
+

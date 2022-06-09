@@ -1,0 +1,15 @@
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: 2px solid red; */
+}
+
+.dFlex {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
