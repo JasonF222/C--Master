@@ -8,25 +8,25 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ViewModelFun
 build_property.RootNamespace = ViewModelFun
-build_property.ProjectDir = C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCTwo\ViewModelFun\
+build_property.ProjectDir = c:\Users\Jason\Desktop\c#\ASP.NETCore\MVCTwo\ViewModelFun\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jason\Desktop\c#\ASP.NETCore\MVCTwo\ViewModelFun
+build_property.MSBuildProjectDirectory = c:\Users\Jason\Desktop\c#\ASP.NETCore\MVCTwo\ViewModelFun
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/Index.cshtml]
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/Numbers.cshtml]
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/Numbers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOdW1iZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/SingleUser.cshtml]
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/SingleUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaW5nbGVVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/UserList.cshtml]
+[c:/Users/Jason/Desktop/c\#/ASP.NETCore/MVCTwo/ViewModelFun/Views/Home/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
