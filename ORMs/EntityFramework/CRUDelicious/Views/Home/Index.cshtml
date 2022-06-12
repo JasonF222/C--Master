@@ -1,0 +1,22 @@
+﻿@* ViewModel goes here *@
+@model List<Dish>
+
+@{
+    ViewData["Title"] = "CRUDelicious";
+}
+
+
+
+<div class="">
+    <h1 class="display-4">Welcome to CRUDelicious</h1>
+    <h3>Check out some recent dishes:</h3>
+    <p><a href="/addadish" class="btn btn-outline-info text-dark">Add a Dish</a></p>
+    <ul class="list-group text-center" style="width: 500px;">
+@{
+    @foreach(var one in Model)
+    {
+        <li class="list-group-item"><a href="/viewdish/@one.DishId">@one.Name</a> by @one.Chef</li>
+    }
+}
+    </ul>
+</div>
