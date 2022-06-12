@@ -1,0 +1,26 @@
+@model LoginUser
+
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<h1>Login Here!</h1>
+<a href="/" class="btn btn-info">Register</a>
+
+<span class="text-danger">@ViewBag.ErrorMessage</span>
+<div class="log">
+    <form asp-action="LoginSubmit" asp-controller="Home" method="post">
+        <div class="email">
+            <label asp-for="LogEmail"></label>
+            <span asp-validation-for="LogEmail"></span>
+            <input asp-for="LogEmail">
+        </div>
+        <div class="password">
+            <label asp-for="LogPassword"></label>
+            <span asp-validation-for="LogPassword"></span>
+            <input asp-for="LogPassword">
+        </div>
+        <button type="submit" class="btn btn-info">Login</button>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model User 
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Register Here!</h1>
+    <a href="/login" class="btn btn-info mt-3 mb-3">Login</a>
+    <div class="form d-flex justify-content-center mt-4">
+        <form asp-action="RegisterUser" asp-controller="Home" method="post" class="form-group">
+        <div class="fname d-flex gap-5">
+            <label asp-for="FirstName" class="form-label"></label>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+            <input asp-for="FirstName" class="form-control">
+        </div>
+        <div class="lname d-flex gap-5">
+            <label asp-for="LastName" class="form-label"></label>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+            <input asp-for="LastName" class="form-control">
+        </div>
+        <div class="email d-flex gap-5">
+            <label asp-for="Email" class="form-label"></label>
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <input asp-for="Email" class="form-control">
+        </div>
+        <div class="password d-flex gap-5">
+            <label asp-for="Password" class="form-label"></label>
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input asp-for="Password" class="form-control">
+        </div>
+        <div class="confirmpass d-flex gap-5">
+            <label asp-for="Confirm" class="form-label"></label>
+            <span asp-validation-for="Confirm" class="text-danger"></span>
+            <input asp-for="Confirm" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-info mt-3">Sign Up Now</button>
+        </form>
+    </div>
+
+</div>
