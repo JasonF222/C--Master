@@ -1,0 +1,45 @@
+@model Dish
+
+@{
+    ViewData["Title"] = "Dishes";
+}
+
+<div class="text-center">
+    <span><a href="/">Home</a></span>
+    <h1>Add a Dish!</h1>
+    <form asp-action="SubmitDish" asp-controller="Home" method="post" class="form-group">
+        <div class="dishname">
+            <label asp-for="DishName"></label>
+            <span asp-validation-for="DishName"></span>
+            <input asp-for="DishName" class="form-control">
+        </div>
+        <div class="calories">
+            <label asp-for="Calories"></label>
+            <span asp-validation-for="Calories"></span>
+            <input asp-for="Calories" class="form-control">
+        </div>
+        <div class="tastiness">
+            <label asp-for="Tastiness"></label>
+            <span asp-validation-for="Tastiness"></span>
+            <select asp-for="Tastiness" class="form-select">
+                <option class="form-select" value="1">1</option>
+                <option class="form-select" value="2">2</option>
+                <option class="form-select" value="3">3</option>
+                <option class="form-select" value="4">4</option>
+                <option class="form-select" value="5">5</option>
+            </select>
+        </div>
+        <div class="description">
+            <label asp-for="Description"></label>
+            <span asp-validation-for="Description"></span>
+            <textarea asp-for="Description" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="chefname">
+            <label asp-for="ChefId"></label>
+            <span asp-validation-for="ChefId"></span>
+            <select asp-for="ChefId">
+            </select>
+        </div>
+        <button type="submit">Add Dish</button>
+    </form>
+</div>

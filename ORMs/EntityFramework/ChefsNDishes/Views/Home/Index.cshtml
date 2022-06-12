@@ -1,0 +1,33 @@
+﻿@model List<Chef>
+
+@{
+    ViewData["Title"] = "Chef Roster";
+}
+
+<div class="text-center">
+    <span><a href="/">Chefs</a> || </span>
+    <span><a href="/dishes">Dishes</a></span>
+    <h2>Check out our roster of Chefs!</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th># of Dishes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                @foreach(var one in Model)
+                {
+                <tr>
+                    <td>@one.FirstName @one.LastName</td>
+                    <td>@one.DOB</td>
+                    <td># of Dishes</td>
+                </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <span><a href="/new/chef">Add A Chef</a></span>
+</div>
