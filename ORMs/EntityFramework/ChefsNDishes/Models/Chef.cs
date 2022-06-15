@@ -1,5 +1,8 @@
+#pragma warning disable CS8618
 namespace ChefsNDishes.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 public class Chef
 {
@@ -12,6 +15,8 @@ public class Chef
     [Display(Name = "Last Name")]
     public string LastName { get; set; }
     [Required(ErrorMessage = "is required.")]
+    [NoFuture]
+    [Display(Name = "Date of Birth")]
     public DateTime DOB { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
@@ -25,7 +30,7 @@ public class Dish
     [Required]
     [Display(Name = "Chef")]
     public int ChefId { get; set; }
-    public Chef Creator { get; set; }
+    public Chef? Creator { get; set; }
     [Required(ErrorMessage = "is required.")]
     [Display(Name = "Dish Name")]
     public string DishName { get; set; }
@@ -41,4 +46,22 @@ public class Dish
     public int Tastiness { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
+    [NotMapped]
+    public List<Chef> AllChefs { get; set; } = new List<Chef>();
+
 }
+public class NoFutureAttribute : ValidationAttribute
+{
+    protected override ValidationResult? IsValid(object value, ValidationContext values)
+    {
+        DateTime subDate = (DateTime)value;
+        int compYear = DateTime.Now.Year - 18;
+        DateTime compDate = new DateTime(compYear, DateTime.Now.Month, DateTime.Now.Day);
+        if(subDate > compDate)
+        {
+            return new ValidationResult("Chef must be at least 18 years old.");
+        }
+        return ValidationResult.Success;
+    }
+}
+

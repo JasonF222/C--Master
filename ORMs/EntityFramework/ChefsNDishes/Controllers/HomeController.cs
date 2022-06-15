@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ChefsNDishes.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChefsNDishes.Controllers;
 
@@ -19,7 +20,8 @@ public class HomeController : Controller
     [Route("")]
     public IActionResult Index()
     {
-        List<Chef> allChefs = _context.Chefs.OrderBy(c => c.FirstName).ToList();
+        List<Chef> allChefs = _context.Chefs.OrderBy(c => c.FirstName).Include(c => c.CreatedDishes).ToList();
+
         return View(allChefs);
     }
 
@@ -28,10 +30,7 @@ public class HomeController : Controller
 
     public IActionResult Dishes()
     {
-        List<Dish> allDishes = _context.Dishes.OrderBy(d => d.Tastiness).ToList();
-        List<Chef> allChefs = _context.Chefs.ToList();
-        ViewBag.DishList = allDishes;
-        ViewBag.NameList = allChefs;
+        List<Dish> allDishes = _context.Dishes.OrderBy(d => d.Tastiness).Include(d => d.Creator).ToList();
         return View(allDishes);
     }
 
@@ -48,6 +47,8 @@ public class HomeController : Controller
     
     public IActionResult NewDish()
     {
+        List<Chef> chefList = _context.Chefs.ToList();
+        ViewBag.ChefList = chefList;
         return View();
     }
 
@@ -74,8 +75,10 @@ public class HomeController : Controller
         {
             _context.Add(newDish);
             _context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Dishes");
         }
+        List<Chef> chefList = _context.Chefs.ToList();
+        ViewBag.ChefList = chefList;
         return View("NewDish");
     }
 

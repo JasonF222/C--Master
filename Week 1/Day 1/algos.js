@@ -94,7 +94,33 @@
            * - Space: O(?).
            * @returns {SinglyLinkedList} This list.
            */
-        moveMinToFront() {}
+        moveMinToFront() {
+          if (this.isEmpty()) {
+            return this;
+          }
+      
+          let minNode = this.head;
+          let runner = this.head;
+          let prev = this.head;
+      
+          while (runner.next) {
+            if (runner.next.data < minNode.data) {
+              prev = runner;
+              minNode = runner.next;
+            }
+      
+            runner = runner.next;
+          }
+      
+          if (minNode === this.head) {
+            return this;
+          }
+      
+          prev.next = minNode.next;
+          minNode.next = this.head;
+          this.head = minNode;
+          return this;
+        }
         
          // EXTRA
         /**
@@ -108,7 +134,31 @@
            * @returns {SinglyLinkedList} The split list containing the nodes that are
            *    no longer in this list.
            */
-        splitOnVal(val) {}
+        splitOnVal(val) {
+          const newList = new SinglyLinkedList();
+      
+          if (!this.head) {
+            return newList;
+          }
+      
+          if (this.head.data === val) {
+            newList.head = this.head;
+            this.head = null;
+            return newList;
+          }
+      
+          let runner = this.head;
+      
+          while (runner.next) {
+            if (runner.next.data === val) {
+              newList.head = runner.next;
+              runner.next = null;
+              return newList;
+            }
+            runner = runner.next;
+          }
+          return newList;
+        }
 
 
 
@@ -388,7 +438,18 @@
      *    or null when the end of the list has been reached.
      * @returns {SinglyLinkedList} This list.
      */
-    insertAtBackRecursive(data, runner = this.head) {}
+    insertAtBackRecursive(data, runner = this.head) {
+      if (this.isEmpty()) {
+        this.head = new ListNode(data);
+        return this;
+      }
+  
+      if (runner.next === null) {
+        runner.next = new ListNode(data);
+        return this;
+      }
+      return this.insertAtBackRecursive(data, runner.next);
+    }
   
     /**
      * Calls insertAtBack on each item of the given array.

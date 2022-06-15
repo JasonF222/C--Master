@@ -20,10 +20,15 @@
             @{
                 @foreach(var one in Model)
                 {
+                int age = DateTime.Now.Year - one.DOB.Year;
+                if(one.DOB.Month > DateTime.Now.Month)
+                {
+                    age = age - 1;
+                }
                 <tr>
                     <td>@one.FirstName @one.LastName</td>
-                    <td>@one.DOB</td>
-                    <td># of Dishes</td>
+                    <td>@age</td>
+                    <td>@one.CreatedDishes.Count()</td>
                 </tr>
                 }
             }
