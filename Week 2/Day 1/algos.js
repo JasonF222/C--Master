@@ -39,6 +39,71 @@ class BinarySearchTree {
     }
 
     /**
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @returns {BinarySearchTree} This tree.
+     */
+    insert(newVal) {
+        if(this.isEmpty()){
+            this.root = new BSTNode(newVal);
+            return this;
+        }
+        let current = this.root;
+        while(current != null){
+            if(newVal > current.data){
+                if(current.right == null){
+                    current.right = new BSTNode(newVal);
+                    return this;
+                }
+                current = current.right;
+            }
+            if(newVal < current.data){
+                if(current.left == null){
+                    current.left = new BSTNode(newVal);
+                    return this;
+                }
+                current = current.left;
+            }
+        }
+    }
+
+    /**
+      * Inserts a new node with the given newVal in the right place to preserver
+      * the order of this tree.
+      * - Time: O(?).
+      * - Space: O(?).
+      * @param {number} newVal The data to be added to a new node.
+      * @param {Node} curr The node that is currently accessed from the tree as
+      *    the tree is being traversed.
+      * @returns {BinarySearchTree} This tree.
+      */
+    insertRecursive(newVal, curr = this.root) {
+        if(this.isEmpty()){
+            this.root = new BSTNode(newVal);
+            return this;
+        }
+        while(curr != null){
+            if(newVal > curr.data){
+                if(curr.right == null){
+                    curr.right = new BSTNode(newVal);
+                    return this;
+                }
+                return this.insertRecursive(newVal, curr = curr.right);
+            }
+            if(newVal < curr.data){
+                if(curr.left == null){
+                    curr.left = new BSTNode(newVal);
+                    return this;
+                }
+                return this.insertRecursive(newVal, curr = curr.left);
+            }
+        }
+    }
+
+    /**
      * Determines if this tree contains the given searchVal.
      * - Time: O(?).
      * - Space: O(?).
@@ -265,23 +330,43 @@ threeLevelTree.root.right.left = new BSTNode(13);
     4    12  18  24  31  44 66  90
 */
 /***************** Uncomment after insert method is created. ****************/
-// const fullTree = new BinarySearchTree();
+const fullTree = new BinarySearchTree();
 // fullTree
-//   .insert(25)
-//   .insert(15)
-//   .insert(10)
-//   .insert(22)
-//   .insert(4)
-//   .insert(12)
-//   .insert(18)
-//   .insert(24)
-//   .insert(50)
-//   .insert(35)
-//   .insert(70)
-//   .insert(31)
-//   .insert(44)
-//   .insert(66)
-//   .insert(90);
+// fullTree.insert(25);
+// fullTree.insert(15);
+// fullTree.insert(10);
+// fullTree.insert(22);
+// fullTree.insert(4);
+// fullTree.insert(12);
+// fullTree.insert(18);
+// fullTree.insert(24);
+// fullTree.insert(50);
+// fullTree.insert(35);
+// fullTree.insert(70);
+// fullTree.insert(31);
+// fullTree.insert(44);
+// fullTree.insert(66);
+// fullTree.insert(90);
+// fullTree.print();
+
+fullTree
+fullTree.insertRecursive(25);
+fullTree.insertRecursive(15);
+fullTree.insertRecursive(10);
+fullTree.insertRecursive(22);
+fullTree.insertRecursive(4);
+fullTree.insertRecursive(12);
+fullTree.insertRecursive(18);
+fullTree.insertRecursive(24);
+fullTree.insertRecursive(50);
+fullTree.insertRecursive(35);
+fullTree.insertRecursive(70);
+fullTree.insertRecursive(31);
+fullTree.insertRecursive(44);
+fullTree.insertRecursive(66);
+fullTree.insertRecursive(90);
+fullTree.print();
+
 
 // const rootTree = new BinarySearchTree();
 // rootTree.root = new BSTNode(13);
@@ -291,4 +376,4 @@ threeLevelTree.root.right.left = new BSTNode(13);
 // console.log(threeLevelTree.containsRecursive(2));
 
 // console.log(threeLevelTree.max());
-console.log(threeLevelTree.range(5));
+// console.log(threeLevelTree.range(5));

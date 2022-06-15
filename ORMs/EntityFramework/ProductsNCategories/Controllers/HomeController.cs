@@ -7,7 +7,6 @@ namespace ProductsNCategories.Controllers;
 
 public class HomeController : Controller
 {
-
     private ProdCatContext _context;
 
     public HomeController(ProdCatContext context)
@@ -71,10 +70,10 @@ public class HomeController : Controller
     [Route("/view/category/{id}")]
     public IActionResult AddProduct(int id)
     {
-        var OneCategory = _context.Categories.Include(c => c.ProdWithCat).ThenInclude(a => a.Product).FirstOrDefault(c => c.CategoryId == id);
-        ViewBag.ProdList = _context.Products.Include(p => p.CatWithProd).Where(c => !c.CatWithProd.Any(c => c.CategoryId == id)).ToList();
+        Category? oneCategory = _context.Categories.Include(c => c.ProdWithCat).ThenInclude(a => a.Product).FirstOrDefault(c => c.CategoryId == id);
+        ViewBag.prodList = _context.Products.Include(p => p.CatWithProd).Where(c => !c.CatWithProd.Any(c => c.CategoryId == id)).ToList();
         ViewBag.CategoryId = id;
-        return View("AddProduct", OneCategory);
+        return View("AddProduct", oneCategory);
     }
 
     [HttpPost]
@@ -97,16 +96,19 @@ public class HomeController : Controller
         return RedirectToAction("ViewProducts");
     }
 
-
-
-
-
-
-
-
-
-
-
+    [HttpGet]
+    [Route("/anything/{id}")]
+    public IActionResult Anything(int id)
+    {
+        Dictionary<string, object> prodDict = new Dictionary<string, object>();
+        var OneProduct = _context.Products.Include(p => p.CatWithProd).ThenInclude(a => a.Category).FirstOrDefault(p => p.ProductId == id);
+        var CatList = _context.Categories.Include(c => c.ProdWithCat).Where(p => !p.ProdWithCat.Any(p => p.ProductId == id)).ToList();
+        var ProductId = id;
+        // ProdDict.Add("OneProduct", new CategoryViewModel(OneProduct));
+        prodDict.Add("CatList", CatList.Select(x => new CategoryViewModel(x)));
+        prodDict.Add("ProductId", ProductId);
+        return Ok(prodDict);
+    }
 
     public IActionResult Privacy()
     {
