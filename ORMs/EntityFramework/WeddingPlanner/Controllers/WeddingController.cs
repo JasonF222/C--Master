@@ -46,6 +46,8 @@ public class WeddingController : Controller
     [Route("/view/wedding/{id}")]
     public IActionResult ViewWedding(int id)
     {
+        APIKey myKey = new APIKey();
+        ViewBag.Key = myKey.MyAPIKey;
         int? loggedIn = HttpContext.Session.GetInt32("UserID");
         if(loggedIn == null)
         {
