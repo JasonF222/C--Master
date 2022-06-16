@@ -25,13 +25,14 @@
             {
                 @foreach(var one in Model)
                 {
+                    string bigDay = one.WeddingDate.Date.ToString("MMMM dd, yyyy");
                     <tr>
                         <td>
                             <a asp-controller="Wedding" asp-action="ViewWedding" asp-route-id="@one.WeddingID">
                                 @one.WedderOne & @one.WedderTwo
                             </a>
                         </td>
-                        <td>@one.WeddingDate.Date</td>
+                        <td>@bigDay</td>
                         <td>@one.Users.Count</td>
                         @if(one.UserID == ViewBag.LoggedIn)
                         {
@@ -48,7 +49,7 @@
                                     inList = true;
                                 }
                             }
-                            @if(inList)
+                            @if(inList && one.UserID != ViewBag.LoggedIn)
                             {
                                 <td>
                                     <a asp-controller="Wedding" asp-action="UnRSVP" asp-route-id="@one.WeddingID">
@@ -57,7 +58,7 @@
                                 </td>
                                     
                             }
-                            else
+                            @if(!inList && one.UserID != ViewBag.LoggedIn)
                             {
                                 <td>
                                     <a asp-controller="Wedding" asp-action="RSVP" asp-route-id="@one.WeddingID">

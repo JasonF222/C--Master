@@ -19,6 +19,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        
         return RedirectToAction("LogReg", "User");
     }
 

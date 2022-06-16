@@ -19,6 +19,16 @@ public class UserController : Controller
     [Route("LogReg")]
     public IActionResult LogReg()
     {
+        List<Wedding> expiredWeddings = _context.Weddings.Where(w => w.WeddingDate.Date < DateTime.Now.Date).ToList();
+        if(expiredWeddings.Count() < 1)
+        {
+        return View("LogReg");
+        }
+        foreach(Wedding one in expiredWeddings)
+        {
+            _context.Weddings.Remove(one);
+            _context.SaveChanges();
+        }
         return View("LogReg");
     }
 

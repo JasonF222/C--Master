@@ -13,6 +13,7 @@ public class Wedding
     public string WedderTwo { get; set; }
     [Required(ErrorMessage = "is required.")]
     [Display(Name = "Wedding Date")]
+    [NoPastDate]
     public DateTime WeddingDate { get; set; }
     [Required(ErrorMessage = "is required.")]
     [Display(Name = "Wedding Address")]
@@ -21,4 +22,17 @@ public class Wedding
     public User? Creator { get; set; }
     public List<Association> Users  { get; set; } = new List<Association>();
 
+}
+
+public class NoPastDateAttribute : ValidationAttribute
+{
+    protected override ValidationResult? IsValid(object value, ValidationContext validationContext)
+    {
+        DateTime subDate = (DateTime)value;
+        if(subDate.Date < DateTime.Now.Date)
+        {
+            return new ValidationResult("Wedding date must be a future date.");
+        }
+        return ValidationResult.Success;
+    }
 }
