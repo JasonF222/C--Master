@@ -80,6 +80,7 @@ public class HomeController : Controller
     [Route("/submit/product/assoc/{id}")]
     public IActionResult SubmitNewProductAssoc(int id, Association newAssoc)
     {
+        // Check for pre-existing assoc already | avoid doubling up on data //
         newAssoc.CategoryId = id;
         _context.Associations.Add(newAssoc);
         _context.SaveChanges();
@@ -90,6 +91,7 @@ public class HomeController : Controller
     [Route("/submit/category/assoc/{id}")]
     public IActionResult SubmitNewCategoryAssoc(int id, Association newAssoc)
     {
+        // Check for pre-existing assoc already | avoid doubling up on data //
         newAssoc.ProductId = id;
         _context.Associations.Add(newAssoc);
         _context.SaveChanges();

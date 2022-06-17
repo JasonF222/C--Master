@@ -9,9 +9,11 @@ namespace WeddingPlanner.Controllers;
 public class WeddingController : Controller
 {
     private WeddingContext _context;
-    public WeddingController(WeddingContext context)
+    private GoogleMapsAPIConfiguration _configuration;
+    public WeddingController(WeddingContext context, GoogleMapsAPIConfiguration configuration)
     {
         _context = context;
+        _configuration = configuration;
     }
 
     [HttpGet]
@@ -46,8 +48,7 @@ public class WeddingController : Controller
     [Route("/view/wedding/{id}")]
     public IActionResult ViewWedding(int id)
     {
-        APIKey myKey = new APIKey();
-        ViewBag.Key = myKey.MyAPIKey;
+        ViewBag.Key = _configuration.APIKey;
         int? loggedIn = HttpContext.Session.GetInt32("UserID");
         if(loggedIn == null)
         {
